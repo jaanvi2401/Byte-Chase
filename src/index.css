@@ -1,0 +1,199 @@
+:root {
+  --bg-color: #000000;
+  --text-color: #00ff66;
+  --text-dim: rgba(0, 255, 102, 0.5);
+  --error-color: #ff003c;
+  --font-mono: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", cursive;
+}
+
+.cyber-body {
+    background: #050505;
+    color: #00ff66;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* CRT Effects */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.crt-flicker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 255, 102, 0.02);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 9999;
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.05; }
+  50% { opacity: 0.1; }
+  100% { opacity: 0.02; }
+}
+
+#root {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography & Glitch */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--error-color);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -1px 0 #00ffff;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(10px, 9999px, 83px, 0); }
+  20% { clip: rect(61px, 9999px, 20px, 0); }
+  40% { clip: rect(31px, 9999px, 73px, 0); }
+  60% { clip: rect(84px, 9999px, 10px, 0); }
+  80% { clip: rect(4px, 9999px, 52px, 0); }
+  100% { clip: rect(52px, 9999px, 49px, 0); }
+}
+@keyframes glitch-anim-2 {
+  0% { clip: rect(65px, 9999px, 100px, 0); }
+  20% { clip: rect(3px, 9999px, 2px, 0); }
+  40% { clip: rect(98px, 9999px, 43px, 0); }
+  60% { clip: rect(20px, 9999px, 85px, 0); }
+  80% { clip: rect(74px, 9999px, 12px, 0); }
+  100% { clip: rect(14px, 9999px, 78px, 0); }
+}
+
+/* Forms */
+.terminal-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  outline: none;
+  text-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
+  margin-bottom: 2rem;
+}
+
+.terminal-input:focus {
+  border-bottom: 2px solid var(--text-color);
+}
+
+.terminal-btn {
+  background: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 5px rgba(0, 255, 102, 0.2);
+}
+
+.terminal-btn:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
+  text-shadow: none;
+}
+
+/* Utilities */
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Gates */
+.terminal-gate {
+  border: 1px solid var(--text-dim);
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.terminal-gate:hover {
+  border-color: var(--text-color);
+  box-shadow: inset 0 0 10px rgba(0, 255, 102, 0.1), 0 0 10px rgba(0, 255, 102, 0.3);
+}
+
+.terminal-gate::before {
+  content: '>';
+  position: absolute;
+  left: 1rem;
+  top: 2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.terminal-gate:hover::before {
+  opacity: 1;
+}
