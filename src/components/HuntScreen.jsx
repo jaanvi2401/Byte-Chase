@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Mission1 from './Mission1';
 import Mission2 from './Mission2';
 import Mission3 from './Mission3';
+import Mission4 from './Mission4';
 import Mission5 from './Mission5';
 
 const HuntScreen = ({ universeId, onGoHome }) => {
@@ -89,6 +90,14 @@ const HuntScreen = ({ universeId, onGoHome }) => {
       return (
         <div style={{ width: '100%', height: '100vh', overflowY: 'auto', position: 'relative' }}>
           <Mission3 onComplete={handleCompleteMission} universeId={universeId} />
+        </div>
+      );
+    }
+
+    if (activeMissionId === 4) {
+      return (
+        <div style={{ width: '100%', height: '100vh', overflowY: 'auto', position: 'relative' }}>
+          <Mission4 onComplete={handleCompleteMission} universeId={universeId} />
         </div>
       );
     }

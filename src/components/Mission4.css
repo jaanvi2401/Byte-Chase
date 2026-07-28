@@ -1,0 +1,147 @@
+/* ================================================= */
+/*                 MISSION 4 STYLES                  */
+/* ================================================= */
+
+.mission4-page {
+    background: #0b1120;
+    background-image:
+        radial-gradient(circle at top, #1e3a8a22, transparent 45%),
+        radial-gradient(circle at bottom, #00e5ff11, transparent 40%);
+    color: white;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.mission4-header {
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #1f2937;
+    background: #111827;
+}
+
+.mission4-header h1 {
+    font-size: 38px;
+    color: #00E5FF;
+    margin: 0;
+}
+
+.mission4-container {
+    height: 88vh;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.mission4-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .mission4-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mission4-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mission4-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.mission4-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #00e5ff33;
+}
+
+.mission4-card h2 {
+    color: #00E5FF;
+    font-size: 20px;
+    margin: 0;
+}
+
+.mission4-card p {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.mission4-network {
+    background: #111827;
+    border: 1px solid #1f2937;
+}   
+
+.mission4-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .mission4-shortcuts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mission4-shortcut {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+}
+
+.mission4-shortcut h3 {
+    color: #00E5FF;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+
+.mission4-shortcut p {
+    font-size: 13px;
+    color: #d1d5db;
+    margin: 0;
+}
+
+.mission4-sources h2 {
+    color: #a855f7; /* Purple */
+}
+
+/* Submission Overlay for Mission 4 */
+.mission4-submit-overlay {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 10, 5, 0.9);
+    border: 1px solid #00ff66;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.2);
+    z-index: 9999;
+    font-family: 'Press Start 2P', monospace;
+}
