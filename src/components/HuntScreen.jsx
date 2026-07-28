@@ -182,8 +182,15 @@ const HuntScreen = ({ universeId, onGoHome }) => {
                 STATUS: {mission.status}
               </p>
               {(mission.status === 'COMPLETED' || mission.status === 'SKIPPED') && (
-                <p style={{ fontSize: '0.75rem', color: '#00ff66', marginTop: '1rem', fontWeight: 'bold', textShadow: '0 0 5px rgba(0,255,102,0.5)', wordWrap: 'break-word' }}>
-                  KEY: [{getMissionToken(mission.id)}]
+                <p style={{ 
+                  fontSize: '0.75rem', 
+                  color: mission.status === 'COMPLETED' ? '#00ff66' : 'var(--error-color)', 
+                  marginTop: '1rem', 
+                  fontWeight: 'bold', 
+                  textShadow: mission.status === 'COMPLETED' ? '0 0 5px rgba(0,255,102,0.5)' : '0 0 5px rgba(255,0,0,0.5)', 
+                  wordWrap: 'break-word' 
+                }}>
+                  {mission.status === 'COMPLETED' ? 'TOKEN ACCEPTED' : 'TOKEN REJECTED'}
                 </p>
               )}
             </div>
