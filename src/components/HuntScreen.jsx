@@ -174,8 +174,9 @@ const HuntScreen = ({ universeId, onGoHome }) => {
               <h3 style={{ fontSize: '0.85rem', marginBottom: '1rem', lineHeight: '1.5' }}>{mission.name}</h3>
               <p style={{ 
                 fontSize: '0.8rem',
-                color: (mission.status === 'COMPLETED' || mission.status === 'SKIPPED') ? 'var(--text-color)' : 
-                       (mission.status === 'AVAILABLE' ? 'var(--text-color)' : 'var(--error-color)'),
+                color: mission.status === 'COMPLETED' ? 'var(--text-color)' : 
+                       (mission.status === 'SKIPPED' ? 'var(--error-color)' :
+                       (mission.status === 'AVAILABLE' ? 'var(--text-color)' : 'var(--text-dim)')),
                 fontWeight: 'bold' 
               }}>
                 STATUS: {mission.status}

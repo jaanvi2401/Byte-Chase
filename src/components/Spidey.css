@@ -1,7 +1,7 @@
 .spidey-container {
   position: fixed;
-  top: -200px; /* Hidden above the screen */
-  right: 15%; /* Drops down on the right side of the screen */
+  top: -300px; /* Hidden above the screen */
+  right: 20px; /* Drops down on the top right corner */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 
 .spidey-container.drop-down {
-  transform: translateY(350px); /* Drops down 350px into view */
+  transform: translateY(320px); /* Drops down into view */
 }
 
 .web-string {

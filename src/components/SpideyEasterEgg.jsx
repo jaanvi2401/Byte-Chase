@@ -5,7 +5,7 @@ const SpideyEasterEgg = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    // Drop down every 2 minutes (120,000 ms)
+    // Drop down every 30 seconds
     const interval = setInterval(() => {
       setIsActive(true);
       
@@ -14,11 +14,11 @@ const SpideyEasterEgg = () => {
         setIsActive(false);
       }, 6000);
       
-    }, 120000); 
+    }, 30000); 
 
-    // For testing purposes, uncomment this to see it immediately on load:
-    // setTimeout(() => setIsActive(true), 2000);
-    // setTimeout(() => setIsActive(false), 8000);
+    // See it immediately on load:
+    setTimeout(() => setIsActive(true), 1000);
+    setTimeout(() => setIsActive(false), 7000);
 
     return () => clearInterval(interval);
   }, []);

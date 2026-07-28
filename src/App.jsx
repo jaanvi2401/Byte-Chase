@@ -3,6 +3,7 @@ import LoadingScreen from './components/LoadingScreen';
 import LoginScreen from './components/LoginScreen';
 import GatesScreen from './components/GatesScreen';
 import HuntScreen from './components/HuntScreen';
+import SpideyEasterEgg from './components/SpideyEasterEgg';
 
 function App() {
   const [phase, setPhase] = useState(() => localStorage.getItem('cyberhunt_phase') || 'loading');
@@ -49,6 +50,8 @@ function App() {
       
       {/* Phase 3 */}
       {phase === 'hunt' && <HuntScreen universeId={selectedGate} onGoHome={handleGoHome} />}
+
+      <SpideyEasterEgg />
     </div>
   );
 }
