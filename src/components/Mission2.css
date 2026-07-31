@@ -1,12 +1,15 @@
-/* ========================= */
-/* MISSION 2 - COMPANY PAGE  */
-/* ========================= */
+/* ================================================= */
+/*                 MISSION 4 STYLES                  */
+/* ================================================= */
 
-.company-page {
-    background: #f5f5f5;
-    color: #222;
+.mission2-page {
+    background: #0b1120;
+    background-image:
+        radial-gradient(circle at top, #1e3a8a22, transparent 45%),
+        radial-gradient(circle at bottom, #00e5ff11, transparent 40%);
+    color: white;
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: 100%;
     position: absolute;
     top: 0;
@@ -14,141 +17,131 @@
     z-index: 100;
 }
 
-.company-header {
-    background: #111827;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 70px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
-}
-
-.company-logo {
-    font-size: 22px;
-    letter-spacing: 2px;
-}
-
-.company-header nav {
-    display: flex;
-    gap: 35px;
-}
-
-.company-header nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.company-header nav a:hover {
-    color: #60a5fa;
-}
-
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #2563eb, #0f172a);
-    color: white;
-}
-
-.hero h2 {
-    font-size: 42px;
-    margin-bottom: 30px;
-}
-
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    line-height: 1.8;
-    margin-bottom: 45px;
-}
-
-.hero button {
-    margin: 10px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    background: white;
-    color: #2563eb;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: not-allowed;
-}
-
-.about {
-    max-width: 1000px;
-    margin: auto;
-    padding: 70px 30px;
-}
-
-.about h2 {
-    margin-bottom: 20px;
-}
-
-.about p {
-    line-height: 1.8;
-}
-
-.services {
-    background: white;
-    padding: 80px 30px;
-}
-
-.services h2 {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.cards {
+.mission2-header {
+    height: 12vh;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 300px;
-    background: #f9fafb;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: #2563eb;
-}
-
-.card p {
-    line-height: 1.6;
-}
-
-.company-page footer {
+    align-items: center;
+    border-bottom: 1px solid #1f2937;
     background: #111827;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 70px;
 }
 
-/* Submission Overlay */
+.mission2-header h1 {
+    font-size: 38px;
+    color: #00E5FF;
+    margin: 0;
+}
+
+.mission2-container {
+    height: 88vh;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.mission2-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .mission2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mission2-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mission2-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.mission2-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #00e5ff33;
+}
+
+.mission2-card h2 {
+    color: #00E5FF;
+    font-size: 20px;
+    margin: 0;
+}
+
+.mission2-card p {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.mission2-network {
+    background: #111827;
+    border: 1px solid #1f2937;
+}   
+
+.mission2-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .mission2-shortcuts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mission2-shortcut {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+}
+
+.mission2-shortcut h3 {
+    color: #00E5FF;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+
+.mission2-shortcut p {
+    font-size: 13px;
+    color: #d1d5db;
+    margin: 0;
+}
+
+.mission2-sources h2 {
+    color: #a855f7; /* Purple */
+}
+
+/* Submission Overlay for Mission 4 */
 .mission2-submit-overlay {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(17, 24, 39, 0.95);
-    padding: 20px;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 10, 5, 0.9);
     border: 1px solid #00ff66;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,255,102,0.2);
-    z-index: 1000;
-    font-family: 'Press Start 2P', cursive;
-    color: #00ff66;
-    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.2);
+    z-index: 9999;
+    font-family: 'Press Start 2P', monospace;
 }

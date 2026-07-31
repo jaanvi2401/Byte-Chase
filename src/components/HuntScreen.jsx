@@ -17,9 +17,9 @@ const HuntScreen = ({ universeId, onGoHome }) => {
     if (saved) return JSON.parse(saved);
     return [
       { id: 1, name: 'MISSION_01: Reconnaissance', status: 'AVAILABLE' },
-      { id: 2, name: 'MISSION_02: Deep Inspection', status: 'LOCKED' },
+      { id: 2, name: 'MISSION_02: Packet Sniffing', status: 'LOCKED' },
       { id: 3, name: 'MISSION_03: Access Bypass', status: 'LOCKED' },
-      { id: 4, name: 'MISSION_04: Packet Sniffing', status: 'LOCKED' },
+      { id: 4, name: 'MISSION_04: Deep Inspection', status: 'LOCKED' },
       { id: 5, name: 'MISSION_05: Brute Force', status: 'LOCKED' }
     ];
   });
@@ -45,9 +45,9 @@ const HuntScreen = ({ universeId, onGoHome }) => {
   const getMissionToken = (id) => {
     const allTokens = {
       1: { 1: 'DUNES', 2: 'HE-MAN', 3: 'COCKROACH', 4: 'MELODY', 5: 'GRAMOPHONE' },
-      2: { 1: 'TRIDENT', 2: 'THOR', 3: 'HADDI', 4: 'PAPPU', 5: 'BOOKSHELVES' },
+      2: { 1: 'CASTLE', 2: 'AAMIR KHAN', 3: 'DORA', 4: 'PUTIN', 5: 'NINJA' },
       3: { 1: 'WINDMILL', 2: 'RAVI KISHAN', 3: 'PLUTO', 4: 'HAT', 5: 'WINE BOTTLES' },
-      4: { 1: 'CASTLE', 2: 'AAMIR KHAN', 3: 'DORA', 4: 'PUTIN', 5: 'NINJA' },
+      4: { 1: 'TRIDENT', 2: 'THOR', 3: 'HADDI', 4: 'PAPPU', 5: 'BOOKSHELVES' },
       5: { 1: 'AURORA', 2: 'DEADPOOL', 3: 'SAMURAI', 4: 'UNKNOWN', 5: 'COFFIN' }
     };
     return allTokens[id] ? (allTokens[id][universeId] || 'UNKNOWN_TOKEN') : 'UNKNOWN_TOKEN';
