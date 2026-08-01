@@ -19,8 +19,8 @@ const Mission5 = ({ onComplete, onSkip, universeId }) => {
       1: 'AURORA',
       2: 'DEADPOOL',
       3: 'SAMURAI',
-      4: 'UNKNOWN',
-      5: 'COFFIN'
+      4: 'LATENT',
+      5: 'BCCI'
     };
     return universeTokens[universeId] || 'UNKNOWN_TOKEN';
   };

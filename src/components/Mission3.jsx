@@ -6,11 +6,11 @@ const Mission3 = ({ onComplete, onSkip, universeId }) => {
 
   const getMissionToken = () => {
     const universeTokens = {
-      1: 'WINDMILL',
+      1: 'FROZEN',
       2: 'RAVI KISHAN',
       3: 'PLUTO',
       4: 'HAT',
-      5: 'WINE BOTTLES'
+      5: 'SHAKIRA'
     };
     return universeTokens[universeId] || 'UNKNOWN_TOKEN';
   };

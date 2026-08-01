@@ -44,11 +44,11 @@ const HuntScreen = ({ universeId, onGoHome }) => {
 
   const getMissionToken = (id) => {
     const allTokens = {
-      1: { 1: 'DUNES', 2: 'HE-MAN', 3: 'COCKROACH', 4: 'MELODY', 5: 'GRAMOPHONE' },
-      2: { 1: 'CASTLE', 2: 'AAMIR KHAN', 3: 'DORA', 4: 'PUTIN', 5: 'NINJA' },
-      3: { 1: 'WINDMILL', 2: 'RAVI KISHAN', 3: 'PLUTO', 4: 'HAT', 5: 'WINE BOTTLES' },
-      4: { 1: 'TRIDENT', 2: 'THOR', 3: 'HADDI', 4: 'PAPPU', 5: 'BOOKSHELVES' },
-      5: { 1: 'AURORA', 2: 'DEADPOOL', 3: 'SAMURAI', 4: 'UNKNOWN', 5: 'COFFIN' }
+      1: { 1: 'AQUAMAN', 2: 'HE-MAN', 3: 'COCKROACH', 4: 'MELODY', 5: '19' },
+      2: { 1: 'TRIDENT', 2: 'THOR', 3: 'HADDI', 4: 'PAPPU', 5: 'THALA' },
+      3: { 1: 'FROZEN', 2: 'RAVI KISHAN', 3: 'PLUTO', 4: 'HAT', 5: 'SHAKIRA' },
+      4: { 1: 'CASTLE', 2: 'AAMIR KHAN', 3: 'DORA', 4: 'PUTIN', 5: 'THE GOAT' },
+      5: { 1: 'AURORA', 2: 'DEADPOOL', 3: 'SAMURAI', 4: 'LATENT', 5: 'BCCI' }
     };
     return allTokens[id] ? (allTokens[id][universeId] || 'UNKNOWN_TOKEN') : 'UNKNOWN_TOKEN';
   };

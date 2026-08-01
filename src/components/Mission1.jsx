@@ -5,11 +5,11 @@ const Mission1 = ({ onComplete, onSkip, universeId }) => {
 
   const getMissionToken = () => {
     const universeTokens = {
-      1: 'DUNES',
+      1: 'AQUAMAN',
       2: 'HE-MAN',
       3: 'COCKROACH',
       4: 'MELODY',
-      5: 'GRAMOPHONE'
+      5: '19'
     };
     return universeTokens[universeId] || 'UNKNOWN_TOKEN';
   };
