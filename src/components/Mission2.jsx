@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Mission2.css';
 
-const Mission2 = ({ onComplete, universeId }) => {
+const Mission2 = ({ onComplete, onSkip, universeId }) => {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState(false);
   const [isGranted, setIsGranted] = useState(false);

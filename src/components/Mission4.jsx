@@ -14,7 +14,7 @@ const textToMorse = (text) => {
   }).join('  ');
 };
 
-const Mission4 = ({ onComplete, universeId }) => {
+const Mission4 = ({ onComplete, onSkip, universeId }) => {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState(false);
   const [isGranted, setIsGranted] = useState(false);

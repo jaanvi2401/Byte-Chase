@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Mission1 = ({ onComplete, universeId }) => {
+const Mission1 = ({ onComplete, onSkip, universeId }) => {
   const [isGranted, setIsGranted] = useState(false);
 
   const getMissionToken = () => {

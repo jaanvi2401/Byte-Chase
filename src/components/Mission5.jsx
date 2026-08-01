@@ -8,7 +8,7 @@ const riddles = {
   5: { img: "/images/speakeasy.png", text: "In shadows of fields not meant for eyes, one half is true, one half in disguise. Reverse, rejoin, unwrap the seal, numbers whisper what is real. A computer usually interprets the alphabets as numbers and each alphabet is associated with a number and every alphabet has its own importance." }
 };
 
-const Mission5 = ({ onComplete, universeId }) => {
+const Mission5 = ({ onComplete, onSkip, universeId }) => {
   const [hash, setHash] = useState(window.location.hash);
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState(false);

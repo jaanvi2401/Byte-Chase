@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Mission3.css';
 
-const Mission3 = ({ onComplete, universeId }) => {
+const Mission3 = ({ onComplete, onSkip, universeId }) => {
   const [screen, setScreen] = useState('main'); // 'main', 'premium', 'wrong'
 
   const getMissionToken = () => {
