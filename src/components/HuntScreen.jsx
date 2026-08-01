@@ -20,7 +20,7 @@ const HuntScreen = ({ universeId, onGoHome }) => {
       { id: 2, name: 'MISSION_02: Packet Sniffing', status: 'LOCKED' },
       { id: 3, name: 'MISSION_03: Access Bypass', status: 'LOCKED' },
       { id: 4, name: 'MISSION_04: Deep Inspection', status: 'LOCKED' },
-      { id: 5, name: 'MISSION_05: Brute Force', status: 'LOCKED' }
+      { id: 5, name: 'MISSION_05: Metadata Detection', status: 'LOCKED' }
     ];
   });
 
