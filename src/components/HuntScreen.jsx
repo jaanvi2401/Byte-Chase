@@ -214,22 +214,6 @@ const HuntScreen = ({ universeId, onGoHome }) => {
                 {(mission.status === 'COMPLETED' || mission.status === 'SKIPPED') ? 'DATA SECURED' : 
                  (mission.status === 'LOCKED' ? 'LOCKED' : 'EXECUTE')}
               </button>
-              
-              {/* Skip button only for available missions after mission 1 */}
-              {mission.id > 1 && mission.status === 'AVAILABLE' && (
-                <button 
-                  className="terminal-btn" 
-                  onClick={() => handleSkip(mission.id)}
-                  style={{ 
-                    flex: 1,
-                    borderColor: 'var(--error-color)',
-                    color: 'var(--error-color)',
-                    boxShadow: 'none'
-                  }}
-                >
-                  SKIP (-0.25)
-                </button>
-              )}
             </div>
           </div>
         ))}
