@@ -94,6 +94,22 @@ const Mission1 = ({ onComplete, universeId }) => {
         <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Request validation failed.</p>
         <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Required parameter missing.</p>
         <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Try reviewing the request URL.</p>
+        
+        {onSkip && (
+          <button 
+            className="terminal-btn" 
+            onClick={onSkip} 
+            style={{ 
+              marginTop: '30px', 
+              fontSize: '0.8rem', 
+              borderColor: 'var(--error-color)',
+              color: 'var(--error-color)',
+              boxShadow: 'none'
+            }}
+          >
+            SKIP MISSION (-0.25)
+          </button>
+        )}
       </div>
     </div>
   );

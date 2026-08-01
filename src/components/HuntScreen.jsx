@@ -70,18 +70,23 @@ const HuntScreen = ({ universeId, onGoHome }) => {
     unlockNextMission(missionId);
   };
 
+  const handleSkipMission = () => {
+    handleSkip(activeMissionId);
+    setActiveMissionId(null);
+  };
+
   if (activeMissionId !== null) {
     if (activeMissionId === 1) {
       return (
         <div style={{ height: '100%', width: '100%', overflowY: 'auto' }}>
-          <Mission1 onComplete={handleCompleteMission} universeId={universeId} />
+          <Mission1 onComplete={handleCompleteMission} onSkip={handleSkipMission} universeId={universeId} />
         </div>
       );
     }
     if (activeMissionId === 2) {
       return (
         <div style={{ width: '100%', height: '100vh', overflowY: 'auto', position: 'relative' }}>
-          <Mission2 onComplete={handleCompleteMission} universeId={universeId} />
+          <Mission2 onComplete={handleCompleteMission} onSkip={handleSkipMission} universeId={universeId} />
         </div>
       );
     }
@@ -89,7 +94,7 @@ const HuntScreen = ({ universeId, onGoHome }) => {
     if (activeMissionId === 3) {
       return (
         <div style={{ width: '100%', height: '100vh', overflowY: 'auto', position: 'relative' }}>
-          <Mission3 onComplete={handleCompleteMission} universeId={universeId} />
+          <Mission3 onComplete={handleCompleteMission} onSkip={handleSkipMission} universeId={universeId} />
         </div>
       );
     }
@@ -97,7 +102,7 @@ const HuntScreen = ({ universeId, onGoHome }) => {
     if (activeMissionId === 4) {
       return (
         <div style={{ width: '100%', height: '100vh', overflowY: 'auto', position: 'relative' }}>
-          <Mission4 onComplete={handleCompleteMission} universeId={universeId} />
+          <Mission4 onComplete={handleCompleteMission} onSkip={handleSkipMission} universeId={universeId} />
         </div>
       );
     }
@@ -105,7 +110,7 @@ const HuntScreen = ({ universeId, onGoHome }) => {
     if (activeMissionId === 5) {
       return (
         <div style={{ width: '100%', height: '100vh', overflowY: 'auto', position: 'relative' }}>
-          <Mission5 onComplete={handleCompleteMission} universeId={universeId} />
+          <Mission5 onComplete={handleCompleteMission} onSkip={handleSkipMission} universeId={universeId} />
         </div>
       );
     }

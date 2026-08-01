@@ -121,6 +121,22 @@ const Mission3 = ({ onComplete, universeId }) => {
 
       <footer className="mission3-footer">
         ©️ 2026 Nexora Technologies
+        {onSkip && (
+          <button 
+            onClick={onSkip} 
+            style={{ 
+              marginLeft: '20px', 
+              padding: '5px 10px', 
+              fontSize: '0.8rem', 
+              background: 'transparent',
+              border: '1px solid var(--error-color)',
+              color: 'var(--error-color)',
+              cursor: 'pointer'
+            }}
+          >
+            SKIP MISSION (-0.25)
+          </button>
+        )}
       </footer>
     </div>
   );
