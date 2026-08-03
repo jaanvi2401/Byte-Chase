@@ -93,7 +93,11 @@ const Mission1 = ({ onComplete, onSkip, universeId }) => {
         <p>&gt; Diagnostics:</p>
         <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Request validation failed.</p>
         <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Required parameter missing.</p>
-        <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Try reviewing the request URL.</p>
+        <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] URL parameters can modify how a request is processed.</p>
+        <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Try adding a parameter to the URL using: ?parameter=value</p>
+        <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] The gateway is checking for an **access** parameter.</p>
+        <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Hint: The required value is the opposite of **DENIED**.</p>
+        <p style={{ color: '#ffd54f', opacity: 0.85 }}>[!] Re-submit the modified URL.</p>
         
         {onSkip && (
           <button 
