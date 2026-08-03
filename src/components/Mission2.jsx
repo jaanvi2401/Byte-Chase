@@ -116,14 +116,17 @@ const Mission2 = ({ onComplete, onSkip, universeId }) => {
           <div className="mission2-shortcut">
             <h3>F12</h3>
             <p>Open Developer Tools</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
           <div className="mission2-shortcut">
             <h3>Ctrl + Shift + I</h3>
             <p>Open Inspect Element</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
           <div className="mission2-shortcut">
             <h3>Ctrl + Shift + C</h3>
             <p>Select Any Element</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
         </div>
       </div>
