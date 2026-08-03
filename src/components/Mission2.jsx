@@ -79,36 +79,42 @@ const Mission2 = ({ onComplete, onSkip, universeId }) => {
             <h2>📄 Elements</h2>
             <p>Inspect HTML tags, IDs, classes and page structure.</p>
             <p>The Elements panel shows the live DOM tree of the page. Right-click any element and choose "Inspect" to jump straight to it, or use Ctrl+Shift+C (Cmd+Option+C on Mac) to pick an element directly from the page. Edit HTML attributes in real time, view computed styles, and see which CSS rules apply to each element. Use the arrow keys to navigate the tree and the search box to find specific nodes.</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
 
           <div className="mission2-card">
             <h2>🎨 Styles</h2>
             <p>Modify CSS properties and experiment with colours.</p>
             <p>The Styles sidebar (next to the Elements panel) shows all CSS rules applied to the selected element. Toggle properties on and off with a checkbox, edit values live, and see changes instantly. Use the color picker to experiment with colours, add new declarations, or inspect which styles are inherited. Overridden rules appear strikethrough so you can debug conflicts easily, and the Computed tab shows the final resolved values for every property.</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
 
           <div className="mission2-card">
             <h2>💻 Console</h2>
             <p>View logs, warnings and JavaScript output.</p>
             <p>The Console tab lets you run JavaScript in the context of the current page. View console.log, console.warn, and console.error messages, interact with the page's objects and functions, and debug code with ease. Use the up/down arrow keys to cycle through command history, and the $0, $1 shortcuts to reference the currently selected element in the Elements panel. Filter output by level (Verbose, Log, Warn, Error) using the filter buttons at the top.</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
 
           <div className="mission2-card mission2-network">
             <h2>🌐 Network</h2>
             <p>Monitor requests between the browser and the server.</p>
             <p>The Network panel records every HTTP request the page makes — HTML, CSS, JS, images, XHR/fetch calls, and more. Click any entry to inspect headers, payload, response body, and timing details. Use the filter buttons to narrow by type (XHR, JS, CSS, Img, etc.), and enable "Preserve log" to keep entries across page reloads. Great for debugging slow loads, failed requests, and API responses — hover over the timeline for a visual breakdown of where time was spent.</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
 
           <div className="mission2-card">
             <h2>💾 Application</h2>
             <p>View Cookies, Local Storage and Session Storage.</p>
             <p>The Application panel (called "Storage" in some browsers) lets you inspect and manage all client-side data: Cookies, Local Storage, Session Storage, IndexedDB, and Cache Storage. View, add, edit, or delete stored key-value pairs, examine cookie attributes like expiry and security flags, and debug service worker caches. Essential for understanding how web apps persist data across sessions and for troubleshooting storage-related issues.</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
 
           <div className="mission2-card mission2-sources">
             <h2>📂 Sources</h2>
             <p>Browse JavaScript and frontend source files.</p>
             <p>The Sources panel displays all files loaded by the page — HTML, CSS, JS, images, and more. Set breakpoints, step through code line by line, inspect call stacks, and watch variable values change in real time. Use the Pretty Print button to format minified files, and the Call Stack pane to trace how your code was reached. Perfect for debugging JavaScript logic and understanding how scripts interact with the DOM and each other.</p>
+            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
         </div>
 
@@ -116,17 +122,14 @@ const Mission2 = ({ onComplete, onSkip, universeId }) => {
           <div className="mission2-shortcut">
             <h3>F12</h3>
             <p>Open Developer Tools</p>
-            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
           <div className="mission2-shortcut">
             <h3>Ctrl + Shift + I</h3>
             <p>Open Inspect Element</p>
-            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
           <div className="mission2-shortcut">
             <h3>Ctrl + Shift + C</h3>
             <p>Select Any Element</p>
-            <p style={{ fontSize: '0.6rem', color: '#888', marginTop: '10px' }}>when inspecting , try refreshing</p>
           </div>
         </div>
       </div>
