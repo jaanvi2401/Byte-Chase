@@ -6,7 +6,6 @@ import Mission4 from './Mission4';
 import Mission5 from './Mission5';
 
 const HuntScreen = ({ universeId, onGoHome }) => {
-  const [score, setScore] = useState(() => parseFloat(localStorage.getItem('cyberhunt_score')) || 0);
   const [activeMissionId, setActiveMissionId] = useState(() => {
     const saved = localStorage.getItem('cyberhunt_active_mission');
     return saved ? parseInt(saved) : null;
@@ -24,8 +23,13 @@ const HuntScreen = ({ universeId, onGoHome }) => {
     ];
   });
 
+  const score = missions.reduce((acc, mission) => {
+    if (mission.status === 'COMPLETED') return acc + 8;
+    if (mission.status === 'SKIPPED') return acc - 4;
+    return acc;
+  }, 0);
+
   // Save to localStorage
-  useEffect(() => { localStorage.setItem('cyberhunt_score', score.toString()); }, [score]);
   useEffect(() => {
     if (activeMissionId === null) {
       localStorage.removeItem('cyberhunt_active_mission');
@@ -58,14 +62,12 @@ const HuntScreen = ({ universeId, onGoHome }) => {
   };
 
   const handleCompleteMission = () => {
-    setScore(prev => prev + 8);
     setMissions(prev => prev.map(m => m.id === activeMissionId ? { ...m, status: 'COMPLETED' } : m));
     unlockNextMission(activeMissionId);
     setActiveMissionId(null);
   };
 
   const handleSkip = (missionId) => {
-    setScore(prev => prev - 4);
     setMissions(prev => prev.map(m => m.id === missionId ? { ...m, status: 'SKIPPED' } : m));
     unlockNextMission(missionId);
   };
