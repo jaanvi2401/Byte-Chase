@@ -117,6 +117,11 @@ const Mission3 = ({ onComplete, onSkip, universeId }) => {
           <br /><br />
           Premium membership required.
         </div>
+
+        <div style={{ textAlign: 'center', marginTop: '30px', marginBottom: '10px' }}>
+          <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem', marginBottom: '10px' }}>&gt; Hint:</p>
+          <img src="/images/inspect-hint.png" alt="Inspect Element Hint" style={{ maxWidth: '250px', borderRadius: '5px', opacity: 0.8 }} />
+        </div>
       </div>
 
       <footer className="mission3-footer">
