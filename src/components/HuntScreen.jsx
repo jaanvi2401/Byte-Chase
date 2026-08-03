@@ -58,14 +58,14 @@ const HuntScreen = ({ universeId, onGoHome }) => {
   };
 
   const handleCompleteMission = () => {
-    setScore(prev => prev + 1);
+    setScore(prev => prev + 8);
     setMissions(prev => prev.map(m => m.id === activeMissionId ? { ...m, status: 'COMPLETED' } : m));
     unlockNextMission(activeMissionId);
     setActiveMissionId(null);
   };
 
   const handleSkip = (missionId) => {
-    setScore(prev => prev - 0.25);
+    setScore(prev => prev - 4);
     setMissions(prev => prev.map(m => m.id === missionId ? { ...m, status: 'SKIPPED' } : m));
     unlockNextMission(missionId);
   };
@@ -154,7 +154,7 @@ const HuntScreen = ({ universeId, onGoHome }) => {
           &gt; U_{universeId} // STATUS REPORT
         </h2>
         <div style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-color)', lineHeight: '1.5' }}>
-          TOKENS EXTRACTED: <span style={{ color: '#fff' }}>[{score.toFixed(2)} / 5]</span>
+          POINTS: <span style={{ color: '#fff' }}>[{score}]</span>
         </div>
       </div>
 

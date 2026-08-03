@@ -111,7 +111,7 @@ const Mission1 = ({ onComplete, onSkip, universeId }) => {
               boxShadow: 'none'
             }}
           >
-            SKIP MISSION (-0.25)
+            SKIP MISSION (-4)
           </button>
         )}
       </div>

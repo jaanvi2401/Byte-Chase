@@ -141,7 +141,7 @@ const Mission5 = ({ onComplete, onSkip, universeId }) => {
               onClick={onSkip} 
               style={{ width: '100%', fontSize: '0.7rem', padding: '10px', marginTop: '10px', borderColor: 'var(--error-color)', color: 'var(--error-color)', boxShadow: 'none' }}
             >
-              SKIP MISSION (-0.25)
+              SKIP MISSION (-4)
             </button>
           )}
         </form>

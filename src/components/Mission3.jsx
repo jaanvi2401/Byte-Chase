@@ -134,7 +134,7 @@ const Mission3 = ({ onComplete, onSkip, universeId }) => {
               cursor: 'pointer'
             }}
           >
-            SKIP MISSION (-0.25)
+            SKIP MISSION (-4)
           </button>
         )}
       </footer>
