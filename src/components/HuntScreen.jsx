@@ -154,7 +154,7 @@ const HuntScreen = ({ universeId, onGoHome }) => {
           &gt; U_{universeId} // STATUS REPORT
         </h2>
         <div style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-color)', lineHeight: '1.5' }}>
-          POINTS: <span style={{ color: '#fff' }}>[{score}]</span>
+          POINTS: <span style={{ color: '#fff' }}>[{score} / 40]</span>
         </div>
       </div>
 
